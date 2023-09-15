@@ -17,13 +17,13 @@ services:
     command:
       - /bin/sh
       - -c
-      - 'apk add --no-cache apache2-utils && htpasswd -Bbn pozos change-me > /auth/htpasswd && registry serve /etc/docker/registry/config.yml'
+      - 'apk add --no-cache apache2-utils && htpasswd -Bbn pozos pozos > /auth/htpasswd && registry serve /etc/docker/registry/config.yml'
     networks:
-      - pozos_reg.network
+      - pozos-registry-network
 
-  frontend.reg:
+  frontend-registry:
     image: joxit/docker-registry-ui:2
-    container_name: frontend.reg
+    container_name: frontend-registry
     depends_on:
       - pozos-registry
     ports: 
@@ -34,7 +34,7 @@ services:
       - REGISTRY_TITLE=Pozos
       - SINGLE_REGISTRY=true
     networks:
-      - pozos_reg.network
+      - pozos-registry-network
 
 networks:
-  pozos_reg.network:
+  pozos-registry-network:
