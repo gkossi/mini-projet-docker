@@ -171,7 +171,7 @@ docker exec student-list-webapp curl -u toto:python -X GET http://student-list-a
 
 6b) Using a web browser `IP:80` :
 
-- Firstly, i'm running the app into a virtual machine. So that, i'll find my VM ip address by typing `ip a` and localise the interface named ``
+- Firstly, i'm running the app into a virtual machine. So that, i'll find my VM ip address by typing `ip a` and localise the interface named `enp0s8`
 ```bash
 #Find th VM ip address
 ip a
