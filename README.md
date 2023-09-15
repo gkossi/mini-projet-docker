@@ -166,7 +166,7 @@ The goal is to test both if the api works and if frontend can get the student li
 ```bash
 docker exec student-list-webapp curl -u toto:python -X GET http://student-list-api:5000/pozos/api/v1.0/get_student_ages
 ```
-> ![8-docker exec]()
+> ![8-docker exec] ![](images/docker-exec_student_age.jpg)
 
 
 6b) Using a web browser `IP:80` :
