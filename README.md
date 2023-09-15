@@ -119,12 +119,12 @@ docker run --rm -d --name=student-list-api -p 5000:5000 --network=student-list-n
 #Verify the container
 docker ps
 ```
-> ![3-docker ps]()
+> ![3-docker ps] ![](images/docker-ps.jpg)
 
 
 I had to mount the `./simple_api/` local directory in the `/data/` internal container directory so the api can use the `student_age.json` list 
 
-> ![4-./simple_api/:/data/]()
+> ![4-./simple_api/:/data/] ![](images/student_age-data.jpg)
 
 
 ## Step N°4 : UPDATING INDEX FILE
@@ -135,18 +135,14 @@ You need to update the following line before running the website container to ma
    ` $url = 'http://<api_ip_or_name:port>/pozos/api/v1.0/get_student_ages';`
 
 ```bash
-sed -i s\<api_ip_or_name:port>\api.student_list:5000\g ./website/index.php
+sed -i 's/<api_ip_or_name:port>/student-list-api:5000/g' ./website/index.php
 ```
-> ![5-api.student_list:5000]()
+> ![5-student-list-api:5000] ![](images/student-list-api_5000.jpg)
 
 
 ## Step N°5 : Runing le Fronted webapp container
 
-5) Run the frontend webapp container :
-
-Username and password are provided in the source code `.simple_api/student_age.py`
-
-> ![6-id/passwd]()
+5) Run the frontend webapp container with the username (toto) and password (python) provided in the source code `.simple_api/student_age.py`
 
 ```bash
 #Run the backend api container
@@ -155,7 +151,7 @@ docker run --rm -d --name=student-list-webapp -p 80:80 --network=student-list-ne
 #Verify the container
 docker ps
 ```
-> ![7-docker ps]()
+> ![7-docker ps] ![](images/docker-ps_webapp.jpg)
 
 
 ## Step N°6 : Testing
