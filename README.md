@@ -171,15 +171,16 @@ docker exec student-list-webapp curl -u toto:python -X GET http://student-list-a
 
 6b) Using a web browser `IP:80` :
 
-- If you're running the app into a remote server or a virtual machine (e.g provisionned by eazytraining's vagrant file), please find your ip address typing `hostname -I`
-> ![9-hostname -I]()
+- Firstly, i'm running the app into a virtual machine. So that, i'll find my VM ip address by typing `ip a` and localise the interface named ``
+```bash
+#Find th VM ip address
+ip a
+```
+> ![9-ip a] ![](images/ip-a.jpg)
 
-- If you are working on PlayWithDocker, just `open the 80 port` on the gui
-- If not, type `localhost:80`
+- Then, i'll open the browser and type `192.168.99.25:80` in the navigation erea and click on the `List Student` button
 
-Click the button
-
-> ![10-check webpage]()
+> ![10-check webpage] ![](images/check-webpage.jpg)
 
 
 ## Step N°7 :
@@ -191,42 +192,47 @@ Remove the network previously created.
 
 
 ```bash
-docker stop student_list-api
+docker stop student-list-api
 docker stop student-list-webapp
 docker network rm student-list-network
 docker network ls
-docker ps
+docker ps -a
 ```
-> ![11-clean-up]()
+> ![11-clean-up] ![](images/clean-up.jpg)
 
 
 
 
 ## DEPLOYEMENT
 
-As the tests passed we can now 'composerize' our infrastructure by putting the `docker run` parameters into a `docker-compose.yml` code.
+As the tests passed i can now 'composerize' the infrastructure by putting the `docker run` parameters into a `docker-compose.yml` code.
 
 1) Run the application (api + webapp) :
 
-As we've already created the application image, now you just have to run :
+As i've already created the application image, now i just have to run :
 
 ```bash
+#Move back to the project root directory
+cd mini-projet-docker/
+
+#Run docker-compose
 docker-compose up -d
 ```
+> ![12-docker-compose up -d] ![](images/docker-compose.jpg)
 
 Docker-compose permits to chose which container must start first.
 The api container will be first as I specified that the webapp `depends_on:` it.
-> ![12-depends on]()
+> ![13-depends on] ![](images/depends-on.jpg)
 
 And the application works :
-> ![13-check app]()
+> ![14-check app] ![](images/check-webpage.jpg)
 
 
 2) Create a registry and its frontend
 
 I used `registry:2` image for the registry, and `joxit/docker-registry-ui:static` for its frontend gui and passed some environment variables :
 
-> ![14-gui registry env var]()
+> ![15-gui registry env var] ![](images/private-registry-var.jpg)
 
 
 E.g we'll be able to delete images from the registry via the gui.
@@ -234,7 +240,9 @@ E.g we'll be able to delete images from the registry via the gui.
 ```bash
 docker-compose -f private-registry.yml up -d
 ```
-> ![15-check gui reg]()
+> ![16-creating private registry] ![](images/creating-private-registry.jpg)
+
+> ![17-checking private registry gui] ![](images/checking-private-registry-gui.jpg)
 
 
 3) Push an image on the registry and test the gui
