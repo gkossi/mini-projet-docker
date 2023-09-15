@@ -202,7 +202,6 @@ docker ps -a
 
 
 
-
 ## DEPLOYEMENT
 
 As the tests passed i can now 'composerize' the infrastructure by putting the `docker run` parameters into a `docker-compose.yml` code.
@@ -277,8 +276,8 @@ docker push localhost:8080/student-list-api-image
 ------------
 
 
-# This concludes my Docker mini-project run report.
+# CONCLUSION.
 
-Throughout this project, I had the opportunity to create a custom Docker image, configure networks and volumes, and deploy applications using docker-compose. Overall, this project has been a rewarding experience that has allowed me to strengthen my technical skills and gain a better understanding of microservices principles. I am now better equipped to tackle similar projects in the future and contribute to improving containerization and deployment processes within my team and organization.
+My experience was rewarding because through this project I had the opportunity to create a custom Docker image, configure networks and volumes, and deploy containers using docker-compose. This has enabled me to strengthen my technical skills and gain a better understanding of the principles of microservices. I look forward to tackling similar projects with any company in the future and helping to improve the containerisation and deployment processes for them.
 
-![octocat](https://myoctocat.com/assets/images/base-octocat.svg) 
+> ![21-My Profile on Linkedin => https://www.linkedin.com/in/gkossi/] ![](images/image-detail-on-registry.jpeg)
