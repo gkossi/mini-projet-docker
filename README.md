@@ -164,7 +164,7 @@ The next command will ask the frontend container to request the backend api and 
 The goal is to test both if the api works and if frontend can get the student list from it.
 
 ```bash
-docker exec student-list-webapp curl -u toto:python -X GET http://api.student_list:5000/pozos/api/v1.0/get_student_ages
+docker exec student-list-webapp curl -u toto:python -X GET http://student-list-api:5000/pozos/api/v1.0/get_student_ages
 ```
 > ![8-docker exec]()
 
