@@ -80,7 +80,7 @@ NB : I consider that you have already cloned the [project](https://github.com/di
 
 ```bash
 #Enter the directory
-cd ./mini-projet-docker/student-list/simple_api
+cd ./mini-projet-docker/simple_api
 
 #Buil the image
 docker build -t student-list-api-image .
