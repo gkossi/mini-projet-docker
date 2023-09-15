@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# To enable zsh, please set ENABLE_ZSH env var to "true" before launching vagrant up 
+#   + On windows => $env:ENABLE_ZSH="true"
+#   + On Linux  => export ENABLE_ZSH="true"
+
+# Définition des variables
+RAM = 2048
+CPU = 2
+IP = "192.168.99.25"
+TYPE = "static"
+NAME = "centos7"
+
+Vagrant.configure("2") do |config|
+  config.vm.define "centos7" do |centos7|
+    centos7.vm.box = "geerlingguy/centos7"
+    centos7.vm.network "private_network", type: TYPE, ip: IP
+    centos7.vm.hostname = NAME
+	
+    centos7.vm.provider "virtualbox" do |v|
+      v.name = NAME
+      v.memory = RAM
+      v.cpus = CPU
+    end
+	
+    centos7.vm.provision :shell do |shell|
+      shell.path = "install_docker-centos.sh"
+      shell.env = { 'ENABLE_ZSH' => ENV['ENABLE_ZSH'] }
+    end
+  end
+end
