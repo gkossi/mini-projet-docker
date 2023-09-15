@@ -74,16 +74,6 @@ To make the job correctly, you have to follow these steps :
 NB : I consider that you have already cloned the [project](https://github.com/diranetafen/student-list.git "project")
 
 
-## Step N°1 : Cloning project
-
-1) Clone the project on the VM in the directory of your choice and use all my configuration files :
-
-```bash
-git clone https://github.com/gkossi/mini-projet-docker.git
-```
-> ![1-git clone] ![](images/git-clone.jpg)
-
-
 ## Step N°1 : Building images
 
 1) Enter the API directory and build it's container image :
