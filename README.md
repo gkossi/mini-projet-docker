@@ -250,16 +250,28 @@ docker-compose -f private-registry.yml up -d
 You have to rename it before (`:latest` is optional) :
 
 ```bash
-docker image tag student-list-api-image:latest pozos-registry:5000/pozos/student-list-api-image:latest
+#Verify the images list and copy the id
 docker images
-docker image push pozos-registry:5000/pozos/student-list-api-image:latest
+
+#Change the image tag by using the id
+docker tag d2abc48681c0 localhost:8080/student-list-api-image
+
+#Verify the image list for matching the tag
+docker images
+
+#Login into the private registry
+docker login -u pozos -p pozos http://localhost:8080/
+
+#Push the image
+docker push localhost:8080/student-list-api-image
 ```
 
-> ![16-push image to registry]()
 
-> ![17-full reg]()
+> ![18-push image to registry]() ![](images/push-image.jpg)
 
-> ![18-full reg details]()
+> ![19-Verify image on the registry] ![](images/image-push-on-registry.jpg)
+
+> ![20-Image detail on the registry] ![](images/image-detail-on-registry.jpg)
 
 
 ------------
