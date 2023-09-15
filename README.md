@@ -281,4 +281,5 @@ docker push localhost:8080/student-list-api-image
 My experience was rewarding because through this project I had the opportunity to create a custom Docker image, configure networks and volumes, and deploy containers using docker-compose. This has enabled me to strengthen my technical skills and gain a better understanding of the principles of microservices. I look forward to tackling similar projects with any company in the future and helping to improve the containerisation and deployment processes for them.
 
 > ![GBENOU Kossi on Linkedin => https://www.linkedin.com/in/gkossi/]
-> ![21-My Profile on Linkedin] ![](images/my-linkedin-profile.jpg)
+
+> ![](images/my-linkedin-profile.jpg)
