@@ -1,6 +1,6 @@
-# mini-projet-docker : Project based on student-list project
+# MINI-PROJET-DOCKER : PROJECT BASED ON STUDENT-LIST PROJECT
 
-# <u>Information about the owner</u>
+# Information about the owner
 
 Session           : Bootcamp DevOps N°15
 
@@ -11,7 +11,7 @@ First & Last Name : Kossi GBENOU
 LinkedIn          : https://www.linkedin.com/in/gkossi/
 
 
-# <u>Summary</u>
+# Summary
 
 As part of this project, whose specifications can be found [here](https://github.com/diranetafen/student-list.git "here"), I was asked to help POZOS deploy its ***student-list*** application with maximum automation by setting up an insfrastructure based on Docker technology.
 
@@ -22,9 +22,9 @@ The application to deploy has two modules :
 
 ![Crédit image : https://github.com/diranetafen] ![project](https://user-images.githubusercontent.com/18481009/84582395-ba230b00-adeb-11ea-9453-22ed1be7e268.jpg)
 
-------------
 
-## <u>The need</u>
+
+# The need
 
 My job is to :
 1) Use Virtualbox as a hypervisor for the virtual machine creation
@@ -32,10 +32,10 @@ My job is to :
 3) Install Docker and Docker-compose on the VM 
 4) Build one container for each module (Backend & Fronted)
 5) Make the containers interact with each other
-6) Provide a private registry
+6) Provide a private registry to store images
 
 
-## <u>My work plan</u>
+# My work plan
 
 Here's my plan for this project:
 
@@ -47,7 +47,7 @@ Here's my plan for this project:
 
 
 
-### <u>The files and their role</u>
+# The files and their roles
 
 My delivery contain five main files : ***Vagrantfile***, ***install_docker-centos.sh***, ***Dockerfile***, ***docker-compose.yml*** and ***private-registry.yml***
 
@@ -61,7 +61,8 @@ My delivery contain five main files : ***Vagrantfile***, ***install_docker-cento
 - index.php: PHP  page where end-user will be connected to interact with the service to list students with their age.
 
 
-### BUILDING IMAGE AND TESTING STEP BY STEP
+
+# BUILDING IMAGE AND TESTING STEP BY STEP
 
 To make the job correctly, you have to follow these steps :
 
@@ -265,9 +266,6 @@ docker push localhost:8080/student-list-api-image
 > ![19-Verify image on the registry] ![](images/image-push-on-registry.jpg)
 
 > ![20-Image detail on the registry] ![](images/image-detail-on-registry.jpg)
-
-
-------------
 
 
 # CONCLUSION.
