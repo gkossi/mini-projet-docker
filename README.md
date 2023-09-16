@@ -1,6 +1,6 @@
 # mini-projet-docker : Project based on student-list project
 
-# Information about the owner
+# <u>Information about the owner</u>
 
 Session           : Bootcamp DevOps N°15
 
@@ -11,20 +11,20 @@ First & Last Name : Kossi GBENOU
 LinkedIn          : https://www.linkedin.com/in/gkossi/
 
 
-# Summary
+# <u>Summary</u>
 
-*As part of this project, whose specifications can be found [here](https://github.com/diranetafen/student-list.git "here"), I was asked to help POZOS deploy its ***student-list*** application with maximum automation by setting up an insfrastructure based on Docker technology.
+As part of this project, whose specifications can be found [here](https://github.com/diranetafen/student-list.git "here"), I was asked to help POZOS deploy its ***student-list*** application with maximum automation by setting up an insfrastructure based on Docker technology.
 
 The application to deploy has two modules :
 
-- *The first module is a REST API (with basic authentication needed) who send the desire list of the student based on JSON file
-- *The second module is a web app written in HTML + PHP who enable end-user to get a list of students
+- The first module is a REST API (with basic authentication needed) who send the desire list of the student based on JSON file
+- The second module is a web app written in HTML + PHP who enable end-user to get a list of students
 
-!["Crédit image : https://github.com/diranetafen"] ![project](https://user-images.githubusercontent.com/18481009/84582395-ba230b00-adeb-11ea-9453-22ed1be7e268.jpg)
+![Crédit image : https://github.com/diranetafen] ![project](https://user-images.githubusercontent.com/18481009/84582395-ba230b00-adeb-11ea-9453-22ed1be7e268.jpg)
 
 ------------
 
-## The need
+## <u>The need</u>
 
 My job is to :
 1) Use Virtualbox as a hypervisor for the virtual machine creation
@@ -35,25 +35,19 @@ My job is to :
 6) Provide a private registry
 
 
-## My work plan
+## <u>My work plan</u>
 
 Here's my plan for this project:
 
-Firstly, I'm setting up my infrastructure from the code to be driven with the Vagrant tool (***Vagrantfile*** and ***install_docker-centos***). This will be a VM running the Centos7 OS with Docker and Docker-compose.
+- Firstly, I'm setting up my infrastructure from the code to be driven with the Vagrant tool (***Vagrantfile*** and ***install_docker-centos***). This will be a VM running the Centos7 OS with Docker and Docker-compose.
 
-Secondly, I'm going to do the build and make the necessary tests. This stage will involve several actions on my part.
+- Secondly, I'm going to do the build and make the necessary tests. This stage will involve several actions on my part.
 
-Then, as soon as the tests are correct, I proceed with the deployment
------------------------
-
-First, let me introduce you the six ***files*** of this project and their role 
-
-Then, I'll show you how I ***built*** and tested the architecture to justify my choices
-
-Third and last part will be about to provide the ***deployment*** process I suggest for this application.
+- Then, as soon as the tests are correct, I proceed with the deployment
 
 
-### The files and their role
+
+### <u>The files and their role</u>
 
 My delivery contain five main files : ***Vagrantfile***, ***install_docker-centos.sh***, ***Dockerfile***, ***docker-compose.yml*** and ***private-registry.yml***
 
