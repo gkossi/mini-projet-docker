@@ -83,7 +83,7 @@ docker build -t student-list-api-image .
 #Verify that the image is built and present localy
 docker images
 ```
-> ![1-docker images] ![](images/docker-images.jpg)
+> ![1-docker images] ![](./images/docker-images.jpg)
 
 
 ## Step N°2 : Creating a bridge-type network
