@@ -85,7 +85,7 @@ docker images
 ```
 > ![1-docker images] ![](https://drive.google.com/file/d/1Bmw_X666TnZSo0OUou4gCTmNgaX-1L0d/view?usp=share_link)
 
-> ![1-docker images](https://drive.google.com/file/d/1Bmw_X666TnZSo0OUou4gCTmNgaX-1L0d/view?usp=share_link)
+> ![1-docker images] (https://drive.google.com/file/d/1Bmw_X666TnZSo0OUou4gCTmNgaX-1L0d/view?usp=share_link)
 
 
 
